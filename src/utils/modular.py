@@ -11,7 +11,7 @@ from typing import Any
 
 
 @ensure_annotations 
-def read_yaml_file(path_to_yaml:Path) -> ConfigBox:
+def read_yaml_file(path_to_yaml:Path) -> ConfigBox:#config box allows to access keys as attributes
 
     try:
         with open(path_to_yaml) as file:
