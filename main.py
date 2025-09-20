@@ -7,7 +7,7 @@ from src.pipeline.stage2_data_validation import DataValidationTrainingPipeline
 from src.pipeline.stage1_data_ingestion import DataIngestionTrainingPipeline
 from src.pipeline.stage3_data_transformation import DataTransformationTrainingPipeline
 from src.pipeline.stage4_model_trainer import ModelTrainerPipeline
-
+from src.pipeline.stage5_model_evaluation import ModelEvaluationPipeline
 from src.logging import logging
 import sys
 from src.exception import CustomException
@@ -54,3 +54,14 @@ try:
 
 except Exception as e:
     raise CustomException(e,sys)
+
+
+STAGE_NAME="Model Evaluation stage"
+try:
+    logging.info(f"{STAGE_NAME} started")
+    model_evaluation= ModelEvaluationPipeline()
+    model_evaluation.main()
+    logging.info(f"{STAGE_NAME} completed")
+
+except Exception as e:
+    raise CustomException(e,sys) 
