@@ -17,11 +17,10 @@ The project includes:
 
 ## ⚙️ Installation & Setup
 1. Clone the Repository
- ```
+   ```
    git clone <repo_url>
    cd Text-Summarization
-
-```
+   ```
 2. Create a Virtual Environment
    ```
    python -m venv venv
@@ -29,14 +28,14 @@ The project includes:
    venv\Scripts\activate      # Windows
    ```
 (or using conda)
-```
+  ```
   conda create -n textsum python=3.11
   conda activate textsum
-```
-3. Install Dependencies
  ```
-   pip install -r requirements.txt
-```
+3. Install Dependencies
+  ```
+  pip install -r requirements.txt
+ ```
 🌐 Running the FastAPI App
 The FastAPI web application is implemented in `app.py`.  
 This is the main entry point for interacting with the text summarization model.
@@ -45,7 +44,7 @@ This is the main entry point for interacting with the text summarization model.
 
 ```bash
 python app.py
-
+```
 
 
 
